@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content=
+        "width=device-width, initial-scale=1.0">
+    <title>
+        FoodExchangeATL
+    </title>
+ 
+    <style>
+ 
+        /* Styling the Body element i.e. Color,
+        Font, Alignment */
+        body {
+            background-color: #a7bed3;
+            font-family: 'Abel';
+            font-size: 22px;
+            text-align: center;
+        }
+ 
+        /* Styling the Form (Color, Padding, Shadow) */
+        form {
+            background-color: #c6e29e;
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px 20px;
+            box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+        }
+ 
+        /* Styling form-control Class */
+        .form-control {
+            text-align: left;
+            margin-bottom: 25px;
+        }
+ 
+        /* Styling form-control Label */
+        .form-control label {
+            display: block;
+            margin-bottom: 10px;
+        }
+ 
+        /* Styling form-control input,
+        select, textarea */
+        .form-control input,
+        .form-control select,
+        .form-control textarea {
+            border: 1px solid #777;
+            border-radius: 2px;
+            font-family: inherit;
+            padding: 10px;
+            display: block;
+            width: 95%;
+        }
+ 
+        /* Styling form-control Radio
+        button and Checkbox */
+        .form-control input[type="radio"],
+        .form-control input[type="checkbox"] {
+            display: inline-block;
+            width: auto;
+        }
+ 
+        /* Styling Button */
+        button {
+            background-color: #f1ffc4;
+            border: 1px solid #777;
+            border-radius: 2px;
+            font-family: inherit;
+            font-size: 21px;
+            display: block;
+            width: 100%;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+        input {
+          accent-color: #ffcaaf;
+        }
+    </style>
+    <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+</head>
+  
+<body>
+  <script src="script.js"></script>
+  
+    <h1>Food Exchange Atlanta</h1>
+    <h2> Find Food Donors Near You</h2>
+  
+    <!-- Create Form -->
+    <form id="form" onsubmit="getInfo()">
+ 
+        <!-- Details -->
+        <div class="form-control">
+            <label for="name" id="label-name">
+                Name
+            </label>
+ 
+            <!-- Input Type Text -->
+            <input type="text"
+                   id="name"
+                   placeholder="Enter your name (or the name of your organization)" />
+        </div>
+  
+        <div class="form-control">
+            <label for="email" id="label-email">
+                Email
+            </label>
+ 
+            <!-- Input Type Email-->
+            <input type="email"
+                   id="email"
+                   placeholder="Enter your email" />
+        </div>
+  
+        <div class="form-control">
+            <label for="city" id="label-city">
+                City
+            </label>
+ 
+            <!-- Input Type Text -->
+            <input type="text"
+                   id="city"
+                   placeholder="Enter your city" />
+        </div>
+  
+        <div class="form-control">
+            <label for="role" id="label-role">
+                Which option best describes you?
+            </label>
+             
+            <!-- Dropdown options -->
+            <select name="role" id="role">
+                <option value="Food Organization">Food Organization</option>
+                <option value="Restaurant">Restaurant</option>
+                <option value="Grocery Store">
+                    Grocery Store
+                </option>
+                <option value="Houseless/Food Insecure Individual">Houseless/Food Insecure individual</option>
+            </select>
+        </div>
+  
+        <div class="form-control">
+            <label>
+                Are you willing to travel for pickup/drop off?
+            </label>
+ 
+            <!-- Input Type Radio Button -->
+            <label for="travel-1">
+                <input type="radio"
+                       id="recommed-1"
+                       name="travel">Yes</input>
+            </label>
+            <label for="travel-2">
+                <input type="radio"
+                       id="recommed-2"
+                       name="travel">No</input>
+            </label>
+            <label for="travel-3">
+                <input type="radio"
+                       id="recommed-3"
+                       name="travel">Within My City</input>
+            </label>
+        </div>
+  
+        <div class="form-control">
+            <label>Types of Food Needed/Supplying
+                <small>(Check all that apply)</small>
+            </label>
+            <!-- Input Type Checkbox -->
+            <label for="inp-1">
+                <input type="checkbox"
+                       name="inp">Canned Goods</input></label>
+            <label for="inp-2">
+                <input type="checkbox"
+                       name="inp">Fresh Fruits</input></label>
+            <label for="inp-3">
+                <input type="checkbox"
+                       name="inp">Fresh Vegetables</input></label>
+            <label for="inp-4">
+                <input type="checkbox"
+                       name="inp">Beverages</input></label>
+            <label for="inp-5">
+                <input type="checkbox"
+                       name="inp">Water</input></label>
+            <label for="inp-6">
+                <input type="checkbox"
+                       name="inp">Boxed Good/input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="inp">Bread</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="inp">Cold Food (sandwiches, deli meats)</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="inp">Cooked Deserts</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="inp">Cooked Meals</input></label>
+        </div>
+  
+        <div class="form-control">
+            <label for="comment">
+                Any other information (optional)
+            </label>
+ 
+            <!-- multi-line text input control -->
+            <textarea name="comment" id="comment"
+                placeholder="Enter your comment here">
+            </textarea>
+        </div>
+  
+        <!-- Multi-line Text Input Control -->
+        <button type="submit" value="submit">
+            Submit
+        </button>
+    </form>
+  
+</body>
+  
+</html>
